@@ -1,5 +1,5 @@
 title: Petter Kärnestad
-description: Min personliga hemsida med GitHub Pages
+description: My page
 baseurl: "" # använd "" för root, eller "/din-sajt" om du har en projekt-sida
 url: "https://petterbror.github.io"
 theme: minima # enkelt och snyggt standardtema
