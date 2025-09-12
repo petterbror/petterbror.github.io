@@ -68,7 +68,7 @@ The built files will be in the `dist` directory.
 
 Edit the following in `src/App.tsx`:
 
-1. **Personal Details**: Update the hero section with your name, title, and description
+1. **Personal Details**: Update the `hero` array with your details
 2. **Projects**: Modify the `projects` array with your actual projects
 3. **Tech Interests**: Update the `techInterests` array with your skills and interests
 4. **Contact Information**: Update contact details in the contact section
