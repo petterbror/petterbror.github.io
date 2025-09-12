@@ -1,4 +1,5 @@
 import { title } from '../data/title';
+import { ThemeSwitcher } from './ThemeSwitcher';
 
 interface NavigationProps {
   activeSection: string;
@@ -46,7 +47,9 @@ export const Navigation = ({ activeSection, onScrollToSection }: NavigationProps
             </button>
           </li>
         </ul>
+        <ThemeSwitcher />
       </div>
     </nav>
+
   );
 };

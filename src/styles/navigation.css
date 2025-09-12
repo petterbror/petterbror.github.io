@@ -1,0 +1,111 @@
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, var(--theme-bg-primary) 0%, var(--theme-bg-secondary) 100%);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--theme-primary);
+  z-index: 1000;
+  transition: all var(--transition-base);
+}
+
+.nav-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.nav-logo .logo-text {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--theme-text-primary);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.nav-logo .logo-text:hover {
+  color: var(--theme-primary);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: var(--space-lg);
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--theme-text-muted);
+  cursor: pointer;
+  transition: color var(--transition-base);
+  padding: var(--space-xs) 0;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--theme-primary);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--theme-primary);
+  border-radius: 1px;
+}
+
+/* ==========================================================================
+   THEME SWITCHER
+   ========================================================================== */
+
+.theme-switcher-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: var(--theme-bg-tertiary);
+  color: var(--theme-text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+  font-size: 18px;
+  border: 2px solid var(--theme-primary);
+}
+
+.theme-switcher-button:hover {
+  background: var(--theme-primary);
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.theme-switcher-button:active {
+  transform: scale(0.95);
+}
+
+.theme-icon {
+  display: block;
+  line-height: 1;
+  transition: transform var(--transition-base);
+}
+
+.theme-switcher-button:hover .theme-icon {
+  transform: rotate(15deg);
+}

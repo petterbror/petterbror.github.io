@@ -1,0 +1,295 @@
+/* ==========================================================================
+   WONKY THEME - CRAZY RAINDROPS & FUN EFFECTS
+   ========================================================================== */
+
+[data-theme="wonky"] {
+  --theme-primary: #00d4ff;
+  --theme-primary-dark: #0099cc;
+  --theme-secondary: #ff6b9d;
+  --theme-secondary-dark: #e91e63;
+  --theme-bg-primary: #0a0a0a;
+  --theme-bg-secondary: #1a1a2e;
+  --theme-bg-tertiary: #16213e;
+  --theme-text-primary: #ffffff;
+  --theme-text-secondary: #e0e0e0;
+  --theme-text-muted: #b0b0b0;
+  --theme-text-subtle: #808080;
+}
+
+/* ==========================================================================
+   RAINDROP ANIMATIONS
+   ========================================================================== */
+
+[data-theme="wonky"] .app {
+  position: relative;
+  overflow-x: hidden;
+}
+
+[data-theme="wonky"] .app::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 107, 157, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 60%, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+  animation: wonkyBackground 20s ease-in-out infinite;
+}
+
+[data-theme="wonky"] .app::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 10% 10%, rgba(0, 212, 255, 0.3) 1px, transparent 1px),
+    radial-gradient(circle at 30% 30%, rgba(255, 107, 157, 0.2) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.4) 1px, transparent 1px),
+    radial-gradient(circle at 70% 70%, rgba(255, 107, 157, 0.3) 1px, transparent 1px),
+    radial-gradient(circle at 90% 90%, rgba(0, 212, 255, 0.2) 1px, transparent 1px);
+  background-size: 50px 50px, 80px 80px, 60px 60px, 70px 70px, 40px 40px;
+  pointer-events: none;
+  z-index: 1;
+  animation: wonkyDots 15s linear infinite;
+}
+
+/* ==========================================================================
+   WONKY ANIMATIONS
+   ========================================================================== */
+
+@keyframes wonkyBackground {
+  0%, 100% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translateX(-10px) translateY(-5px) rotate(1deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(5px) translateY(-10px) rotate(-1deg);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translateX(-5px) translateY(5px) rotate(0.5deg);
+    opacity: 0.6;
+  }
+}
+
+@keyframes wonkyDots {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(-50px) translateY(-50px);
+  }
+}
+
+@keyframes raindrop {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes wonkyFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-10px) rotate(2deg) scale(1.02);
+  }
+  50% {
+    transform: translateY(-5px) rotate(-1deg) scale(0.98);
+  }
+  75% {
+    transform: translateY(-15px) rotate(1deg) scale(1.01);
+  }
+}
+
+@keyframes wonkyPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: hue-rotate(180deg);
+  }
+}
+
+@keyframes wonkyShake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-2px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(2px);
+  }
+}
+
+/* ==========================================================================
+   WONKY COMPONENT EFFECTS
+   ========================================================================== */
+
+[data-theme="wonky"] .navbar {
+  animation: wonkyFloat 8s ease-in-out infinite;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(45deg, #00d4ff, #ff6b9d, #00d4ff) 1;
+}
+
+[data-theme="wonky"] .nav-link:hover {
+  animation: wonkyShake 0.5s ease-in-out;
+}
+
+[data-theme="wonky"] .hero-title {
+  animation: wonkyFloat 6s ease-in-out infinite;
+  background: linear-gradient(45deg, #00d4ff, #ff6b9d, #00d4ff, #ff6b9d);
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: wonkyFloat 6s ease-in-out infinite, wonkyGradient 3s ease-in-out infinite;
+}
+
+[data-theme="wonky"] .btn-primary {
+  animation: wonkyPulse 4s ease-in-out infinite;
+  background: linear-gradient(45deg, #00d4ff, #ff6b9d, #00d4ff);
+  background-size: 200% 200%;
+  animation: wonkyPulse 4s ease-in-out infinite, wonkyGradient 2s ease-in-out infinite;
+}
+
+[data-theme="wonky"] .project-card:hover,
+[data-theme="wonky"] .interest-card:hover {
+  animation: wonkyFloat 2s ease-in-out infinite;
+  border: 2px solid transparent;
+  border-image: linear-gradient(45deg, #00d4ff, #ff6b9d) 1;
+}
+
+[data-theme="wonky"] .theme-switcher-button {
+  animation: wonkyPulse 3s ease-in-out infinite;
+  border: 3px solid transparent;
+  border-image: linear-gradient(45deg, #00d4ff, #ff6b9d, #00d4ff) 1;
+}
+
+[data-theme="wonky"] .theme-switcher-button:hover {
+  animation: wonkyShake 0.3s ease-in-out, wonkyPulse 1s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   RAINDROP ELEMENTS
+   ========================================================================== */
+
+[data-theme="wonky"] .raindrop {
+  position: fixed;
+  width: 2px;
+  height: 20px;
+  background: linear-gradient(to bottom, transparent, #00d4ff, transparent);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  pointer-events: none;
+  z-index: 2;
+  animation: raindrop 3s linear infinite;
+}
+
+[data-theme="wonky"] .raindrop:nth-child(odd) {
+  background: linear-gradient(to bottom, transparent, #ff6b9d, transparent);
+  animation-duration: 2.5s;
+}
+
+[data-theme="wonky"] .raindrop:nth-child(3n) {
+  animation-duration: 4s;
+  width: 3px;
+  height: 25px;
+}
+
+[data-theme="wonky"] .raindrop:nth-child(5n) {
+  animation-duration: 1.8s;
+  width: 1px;
+  height: 15px;
+}
+
+/* ==========================================================================
+   GRADIENT ANIMATIONS
+   ========================================================================== */
+
+@keyframes wonkyGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ==========================================================================
+   WONKY SCROLL EFFECTS
+   ========================================================================== */
+
+[data-theme="wonky"] .section-title {
+  animation: wonkyFloat 5s ease-in-out infinite;
+}
+
+[data-theme="wonky"] .section-title:nth-child(even) {
+  animation-delay: 1s;
+}
+
+[data-theme="wonky"] .section-title:nth-child(3n) {
+  animation-delay: 2s;
+}
+
+/* ==========================================================================
+   WONKY TEXT EFFECTS
+   ========================================================================== */
+
+[data-theme="wonky"] .highlight {
+  background: linear-gradient(45deg, #00d4ff, #ff6b9d, #00d4ff, #ff6b9d);
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: wonkyGradient 2s ease-in-out infinite;
+}
+
+[data-theme="wonky"] .tech-tag:hover,
+[data-theme="wonky"] .tech-badge:hover {
+  animation: wonkyPulse 1s ease-in-out infinite;
+  background: linear-gradient(45deg, #00d4ff, #ff6b9d);
+  background-size: 200% 200%;
+  animation: wonkyPulse 1s ease-in-out infinite, wonkyGradient 1s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   WONKY PROFILE COIN
+   ========================================================================== */
+
+[data-theme="wonky"] .profile-coin {
+  animation: wonkyFloat 4s ease-in-out infinite, wonkyPulse 6s ease-in-out infinite;
+  border: 3px solid transparent;
+  border-image: linear-gradient(45deg, #00d4ff, #ff6b9d, #00d4ff) 1;
+}
+
+[data-theme="wonky"] .profile-coin:hover {
+  animation: wonkyShake 0.5s ease-in-out, wonkyFloat 2s ease-in-out infinite;
+}

@@ -1,0 +1,106 @@
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: var(--space-sm) 0;
+  }
+
+  .nav-container {
+    padding: 0 var(--space-sm);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-sm);
+    height: auto;
+  }
+  
+  .nav-logo {
+    order: 1;
+  }
+  
+  .nav-menu {
+    order: 2;
+    gap: var(--space-lg);
+    justify-content: center;
+  }
+  
+  .nav-link {
+    font-size: var(--font-size-sm);
+  }
+  
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .hero-subtitle {
+    font-size: var(--font-size-xl);
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .profile-coin {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .profile-icon,
+  .profile-photo {
+    font-size: 4rem;
+  }
+  
+  .container {
+    padding: 0 var(--space-sm);
+  }
+  
+  .section-title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .projects-grid,
+  .interests-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+  
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-xs);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .hero-subtitle {
+    font-size: var(--font-size-base);
+  }
+  
+  .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: var(--font-size-sm);
+  }
+  
+  .project-card,
+  .interest-card {
+    padding: var(--space-md);
+  }
+}

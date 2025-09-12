@@ -4,3 +4,5 @@ export { Skills } from './Skills';
 export { Contact } from './Contact';
 export { Navigation } from './Navigation';
 export { Footer } from './Footer';
+export { ThemeSwitcher } from './ThemeSwitcher';
+export { WonkyEffects } from './WonkyEffects';

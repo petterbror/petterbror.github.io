@@ -1,0 +1,78 @@
+/* ==========================================================================
+   THEME SYSTEM
+   ========================================================================== */
+
+/* Light Theme */
+[data-theme="light"] {
+  --theme-primary: #3b82f6;
+  --theme-primary-dark: #1d4ed8;
+  --theme-secondary: #10b981;
+  --theme-secondary-dark: #047857;
+  --theme-bg-primary: #ffffff;
+  --theme-bg-secondary: #f8fafc;
+  --theme-bg-tertiary: #e2e8f0;
+  --theme-text-primary: #1e293b;
+  --theme-text-secondary: #334155;
+  --theme-text-muted: #64748b;
+  --theme-text-subtle: #94a3b8;
+}
+
+/* Blue Theme */
+[data-theme="blue"] {
+  --theme-primary: #3b82f6;
+  --theme-primary-dark: #1d4ed8;
+  --theme-secondary: #06b6d4;
+  --theme-secondary-dark: #0891b2;
+  --theme-bg-primary: #0f172a;
+  --theme-bg-secondary: #1e293b;
+  --theme-bg-tertiary: #334155;
+  --theme-text-primary: #f1f5f9;
+  --theme-text-secondary: #e2e8f0;
+  --theme-text-muted: #cbd5e1;
+  --theme-text-subtle: #94a3b8;
+}
+
+/* Green Theme */
+[data-theme="green"] {
+  --theme-primary: #10b981;
+  --theme-primary-dark: #047857;
+  --theme-secondary: #84cc16;
+  --theme-secondary-dark: #65a30d;
+  --theme-bg-primary: #064e3b;
+  --theme-bg-secondary: #065f46;
+  --theme-bg-tertiary: #047857;
+  --theme-text-primary: #ecfdf5;
+  --theme-text-secondary: #d1fae5;
+  --theme-text-muted: #a7f3d0;
+  --theme-text-subtle: #6ee7b7;
+}
+
+/* Purple Theme */
+[data-theme="purple"] {
+  --theme-primary: #8b5cf6;
+  --theme-primary-dark: #7c3aed;
+  --theme-secondary: #ec4899;
+  --theme-secondary-dark: #db2777;
+  --theme-bg-primary: #1e1b4b;
+  --theme-bg-secondary: #312e81;
+  --theme-bg-tertiary: #4338ca;
+  --theme-text-primary: #faf5ff;
+  --theme-text-secondary: #f3e8ff;
+  --theme-text-muted: #e9d5ff;
+  --theme-text-subtle: #ddd6fe;
+}
+
+/* Reggae Theme */
+[data-theme="reggae"] {
+  --theme-primary: #dc2626;
+  --theme-primary-dark: #b91c1c;
+  --theme-secondary: #eab308;
+  --theme-secondary-dark: #ca8a04;
+  --theme-bg-primary: #14532d;
+  --theme-bg-secondary: #166534;
+  --theme-bg-tertiary: #15803d;
+  --theme-text-primary: #fef3c7;
+  --theme-text-secondary: #fde68a;
+  --theme-text-muted: #f59e0b;
+  --theme-text-subtle: #d97706;
+}

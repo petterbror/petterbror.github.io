@@ -1,0 +1,80 @@
+/* ==========================================================================
+   CSS VARIABLES - DESIGN SYSTEM
+   ========================================================================== */
+
+:root {
+  /* Color System */
+  --color-black: #0a0a0a;
+  --color-dark-grey: #1f2937;
+  --color-medium-grey: #374151;
+  --color-light-grey: #4b5563;
+  --color-card-grey: #3f4a5a;
+  --color-orange: #f59e0b;
+  --color-orange-dark: #d97706;
+  --color-green-dark: #16a34a;
+  --color-green-darker: #15422e;
+  --color-white: #ffffff;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #f3f4f6;
+  --color-text-muted: #d1d5db;
+  --color-text-subtle: #9ca3af;
+
+  /* Theme Variables - Dark (Default) */
+  --theme-primary: var(--color-orange);
+  --theme-primary-dark: var(--color-orange-dark);
+  --theme-secondary: var(--color-green-dark);
+  --theme-secondary-dark: var(--color-green-darker);
+  --theme-bg-primary: var(--color-black);
+  --theme-bg-secondary: var(--color-dark-grey);
+  --theme-bg-tertiary: var(--color-medium-grey);
+  --theme-text-primary: var(--color-text-primary);
+  --theme-text-secondary: var(--color-text-secondary);
+  --theme-text-muted: var(--color-text-muted);
+  --theme-text-subtle: var(--color-text-subtle);
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, var(--color-black) 0%, var(--color-dark-grey) 50%, var(--color-medium-grey) 100%);
+  --gradient-skills: linear-gradient(135deg, var(--color-black) 0%, var(--color-dark-grey) 50%, var(--color-green-darker) 100%);
+  --gradient-projects: linear-gradient(135deg, var(--color-dark-grey) 0%, var(--color-medium-grey) 100%);
+  --gradient-contact: linear-gradient(135deg, var(--color-dark-grey) 0%, var(--color-black) 100%);
+  --gradient-footer: linear-gradient(135deg, var(--color-black) 0%, var(--color-dark-grey) 100%);
+  --gradient-card: linear-gradient(135deg, var(--color-medium-grey) 0%, var(--color-card-grey) 100%);
+  --gradient-card-hover: linear-gradient(135deg, var(--color-card-grey) 0%, var(--color-medium-grey) 100%);
+
+  /* Spacing System */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 5rem;
+
+  /* Font System */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  --font-size-xs: 0.8rem;
+  --font-size-sm: 0.85rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.1rem;
+  --font-size-xl: 1.2rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
+  --font-size-5xl: 3.5rem;
+
+  /* Layout */
+  --max-width: 1200px;
+  --border-radius: 12px;
+  --border-radius-sm: 6px;
+  --border-radius-lg: 20px;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.4);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
