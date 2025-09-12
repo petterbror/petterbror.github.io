@@ -24,3 +24,8 @@ export interface HeroInfo {
   subtitle: string;
   description: string;
 }
+
+export interface Title {
+  title: string;
+  subtitle: string;
+}

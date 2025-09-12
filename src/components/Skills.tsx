@@ -1,4 +1,6 @@
 import type { TechInterest } from '../types';
+import { techInterestsTitle } from '../data/skills';
+import { techInterestsSubtitle } from '../data/skills';
 
 interface SkillsProps {
   techInterests: TechInterest[];
@@ -8,8 +10,8 @@ export const Skills = ({ techInterests }: SkillsProps) => {
   return (
     <section id="interests" className="interests">
       <div className="container">
-        <h2 className="section-title">Technical Skills</h2>
-        <p className="section-subtitle">Full-stack development with focus on integration development within IAM</p>
+        <h2 className="section-title">{techInterestsTitle}</h2>
+        <p className="section-subtitle">{techInterestsSubtitle}</p>
         
         <div className="interests-grid">
           {techInterests.map((interest, index) => (

@@ -1,4 +1,3 @@
-import profilePhoto1 from '../assets/petter1.png';
 import profilePhoto2 from '../assets/petter2.jpg';
 import { heroInfo } from '../data/hero';
 
@@ -39,7 +38,7 @@ export const Hero = ({ onScrollToSection }: HeroProps) => {
           <div className="profile-coin">
             <div className="coin-front">
               <div className="profile-icon">
-                <img src={profilePhoto1} alt="Petter Kärnestad" />
+                <img src={profilePhoto2} alt="Petter Kärnestad" />
               </div>
             </div>
             <div className="coin-back">

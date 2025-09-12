@@ -1,3 +1,5 @@
+import { title } from '../data/title';
+
 interface NavigationProps {
   activeSection: string;
   onScrollToSection: (sectionId: string) => void;
@@ -8,7 +10,7 @@ export const Navigation = ({ activeSection, onScrollToSection }: NavigationProps
     <nav className="navbar">
       <div className="nav-container">
         <div className="nav-logo">
-          <span className="logo-text">Petter Kärnestad</span>
+          <span className="logo-text">{title.title}</span>
         </div>
         <ul className="nav-menu">
           <li className="nav-item">

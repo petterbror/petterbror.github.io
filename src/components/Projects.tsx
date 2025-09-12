@@ -1,4 +1,5 @@
 import type { Project } from '../types';
+import { projectsSubtitle, projectsTitle } from '../data/projects';
 
 interface ProjectsProps {
   projects: Project[];
@@ -8,8 +9,8 @@ export const Projects = ({ projects }: ProjectsProps) => {
   return (
     <section id="projects" className="projects">
       <div className="container">
-        <h2 className="section-title">Projects & Assignments</h2>
-        <p className="section-subtitle">Full-stack development and IAM integrations across various industries</p>
+        <h2 className="section-title">{projectsTitle}</h2>
+        <p className="section-subtitle">{projectsSubtitle}</p>
         
         <div className="projects-grid">
           {projects.map((project) => (
