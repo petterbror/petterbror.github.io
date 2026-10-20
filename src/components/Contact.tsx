@@ -9,12 +9,11 @@ export const Contact = ({ contactInfo }: ContactProps) => {
   return (
     <section id="contact" className="section">
       <div className="container">
-        <p className="label">02 / {contactTitle}</p>
-        <p className="section-subtitle">{contactSubtitle}</p>
-        <a className="contact-link" href={`mailto:${contactInfo.email}`}>
-          <span>{contactInfo.email}</span>
-          <span aria-hidden="true">→</span>
-        </a>
+        <div className="section-head">
+          <h2 className="section-title">{contactTitle}</h2>
+          <p className="section-subtitle">{contactSubtitle}</p>
+        </div>
+        <a className="contact-link" href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
       </div>
     </section>
   );
