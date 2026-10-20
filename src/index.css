@@ -8,6 +8,8 @@
   --line: #2a2a2a;
   --hover: #161616;
   --accent: #ff6a00;
+  --grid: rgba(255, 255, 255, 0.04);
+  --glow: rgba(255, 106, 0, 0.12);
 
   --mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
 
@@ -22,6 +24,8 @@
     --muted: #7b7b78;
     --line: #cfcfcb;
     --hover: #e7e7e4;
+    --grid: rgba(0, 0, 0, 0.06);
+    --glow: rgba(255, 106, 0, 0.14);
     color-scheme: light;
   }
 }
@@ -43,6 +47,51 @@ body {
   font-size: 14px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Background: slowly drifting grid and a soft moving glow */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::before {
+  background-image:
+    radial-gradient(600px circle at 20% 30%, var(--glow), transparent 70%),
+    radial-gradient(500px circle at 80% 70%, var(--glow), transparent 70%),
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+  animation: drift 40s linear infinite, glow 16s ease-in-out infinite alternate;
+  -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent);
+  mask-image: linear-gradient(to bottom, #000 60%, transparent);
+}
+
+@keyframes drift {
+  to {
+    background-position: 0 0, 0 0, 40px 40px, 40px 40px;
+  }
+}
+
+@keyframes glow {
+  from {
+    background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+    opacity: 0.7;
+  }
+  to {
+    background-size: 120% 120%, 120% 120%, 40px 40px, 40px 40px;
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    animation: none;
+  }
 }
 
 ::selection {
