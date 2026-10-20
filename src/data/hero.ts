@@ -1,8 +1,7 @@
 import type { HeroInfo } from '../types';
 
-// Lorem Ipsum mock data for hero section
 export const heroInfo: HeroInfo = {
-  title: "Lorem Ipsum",
-  subtitle: "Dolor Sit Amet & Consectetur Adipiscing",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  title: "Petter Kärnestad",
+  subtitle: "IAM & Authentication Developer",
+  description: "I work with identity and access management, building secure and reliable ways for people and systems to log in and share identity data.",
 };

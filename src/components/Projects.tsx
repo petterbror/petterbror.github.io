@@ -7,33 +7,39 @@ interface ProjectsProps {
 
 export const Projects = ({ projects }: ProjectsProps) => {
   return (
-    <section id="projects" className="projects">
+    <section id="cv" className="section">
       <div className="container">
-        <h2 className="section-title">{projectsTitle}</h2>
-        <p className="section-subtitle">{projectsSubtitle}</p>
-        
-        <div className="projects-grid">
-          {projects.map((project) => (
-            <div key={project.id} className="project-card">
-              <div className="project-header">
-                <h3 className="project-title">{project.title}</h3>
-                <div className="project-links">
-                  {project.liveUrl && (
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="project-link">
-                      <span className="link-icon"></span>
-                    </a>
-                  )}
-                </div>
-              </div>
-              <p className="project-description">{project.description}</p>
-              <div className="project-technologies">
-                {project.technologies.map((tech, index) => (
-                  <span key={index} className="tech-tag">{tech}</span>
-                ))}
-              </div>
-            </div>
-          ))}
+        <div className="section-head">
+          <h2 className="section-title">{projectsTitle}</h2>
+          <p className="section-subtitle">{projectsSubtitle}</p>
         </div>
+
+        <ol className="project-list">
+          {projects.map((project, index) => {
+            const content = (
+              <>
+                <span className="project-index">{String(index + 1).padStart(2, '0')}</span>
+                <div className="project-body">
+                  <h3 className="project-title">{project.title}</h3>
+                  <p className="project-description">{project.description}</p>
+                  <p className="project-tech">{project.technologies.join(' / ')}</p>
+                </div>
+                <span className="project-arrow" aria-hidden="true">{project.liveUrl ? '↗' : ''}</span>
+              </>
+            );
+            return (
+              <li key={project.id}>
+                {project.liveUrl ? (
+                  <a className="project" href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                    {content}
+                  </a>
+                ) : (
+                  <div className="project">{content}</div>
+                )}
+              </li>
+            );
+          })}
+        </ol>
       </div>
     </section>
   );

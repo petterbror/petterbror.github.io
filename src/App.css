@@ -1,9 +1,0 @@
-/* Import all CSS modules */
-@import './styles/variables.css';
-@import './styles/base.css';
-@import './styles/themes.css';
-@import './styles/wonky-theme.css';
-@import './styles/navigation.css';
-@import './styles/hero.css';
-@import './styles/sections.css';
-@import './styles/responsive.css';

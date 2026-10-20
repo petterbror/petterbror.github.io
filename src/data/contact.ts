@@ -1,10 +1,9 @@
 import type { ContactInfo } from '../types';
 
-export const contactTitle = "Lorem Ipsum Dolor";
-export const contactSubtitle = "Lorem Ipsum Dolor Sit Amet";
+export const contactTitle = "Get In Touch";
+export const contactSubtitle = "Feel free to reach out";
 
 
-// Lorem Ipsum mock data for contact information
 export const contactInfo: ContactInfo = {
-  email: "lorem.ipsum@example.com",
+  email: "petter.karnestad@gmail.com",
 };
